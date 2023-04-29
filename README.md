@@ -1,7 +1,10 @@
 # simpleChat
    **简介**
+   
    服务端实现用户登录验证和维护在线用户列表,支持客户端获取在线用户列表，用户端实现用户登录和登出,获取在线用户列表,支持群发消息、一对一聊天和文件传输功能
+   
    **主要类说明**
+   
    服务端:
    -QQServer:服务器启动类,用于监听9999端口,验证用户登录,启动ServerConnectClientThread线程与客户端通讯。
    -SendNewsToAllService:用于通过服务器广播消息给所有在线用户,实现群发消息功能。
@@ -14,7 +17,9 @@
    -ClientConnectServiceThread:用于客户端接收服务器端发送过来的消息、文件等的线程类。
    -ManageClientConnectServerThread:用于管理多个ClientConnectServiceThread线程的管理类,可以通过UserId获取线程。
    -QQView:显示登录和退出菜单,获取用户的选择。
-   **具体分析**
+  
+  **具体分析**
+   
    服务端:
    1. 实现用户登录验证,正确的用户名和密码才能登录成功。
    2. 维护在线用户列表,登录成功的用户添加到在线列表,退出的用户从在线列表移除。
